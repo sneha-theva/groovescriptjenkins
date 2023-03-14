@@ -13,7 +13,7 @@ pipeline{
 
         stage('Create package'){
             steps{
-                sh 'zip -r jenkins.zip index.html'
+                sh 'zip -r jenkins.zip Jenkins_pipeline/index.html'
             }
         }
 
