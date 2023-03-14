@@ -22,7 +22,7 @@ pipeline{
                 sshagent(['AWSKey']) {
                     sh script:'''
                             
-                            ssh -o StrictHostKeyChecking=no ec2-user@100.26.230.113 '
+                            ssh -o StrictHostKeyChecking=no ec2-user@34.234.203.116 
                                 sudo su
                                 sudo yum update -y
                                 sudo yum install httpd -y
@@ -31,8 +31,8 @@ pipeline{
                                 sudo cd /var/www/html
                                 sudo chmod 777 /var/www/html
                             '
-                            scp jenkins.zip ec2-user@100.26.230.113:/var/www/html
-                            ssh ec2-user@100.26.230.113 '
+                            scp jenkins.zip ec2-user@34.234.203.116:/var/www/html
+                            ssh ec2-user@34.234.203.116 '
                                 cd /var/www/html
                                 unzip jenkins.zip -d .
                             '
