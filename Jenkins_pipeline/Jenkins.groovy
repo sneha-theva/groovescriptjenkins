@@ -3,8 +3,11 @@ pipeline{
     stages{
         stage('Code checkout'){
             steps{
+                echo 'GIT PULL START'
                 git branch: 'main', credentialsId: 'Git_cred', url: 'https://github.com/sneha-theva/groovescriptjenkins'
-                echo 'code checkout'
+                echo 'GIT PULL END'
+                echo '$WORKSPACE'
+
             }
         }
 
