@@ -19,7 +19,7 @@ pipeline{
 
         stage('EC2 Instance'){
             steps{
-                sshagent(['snehanew']) {
+                sshagent(['AWSKey']) {
                     sh script:'''
                             
                             ssh -o StrictHostKeyChecking=no ec2-user@100.26.230.113 '
